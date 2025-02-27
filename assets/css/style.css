@@ -1,0 +1,14 @@
+@font-face {
+    font-family: mundial;
+    src: url(../fonts/MundialLight.otf);
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: mundial;
+    src: url(../fonts/MundialRegular.otf);
+    font-weight: normal;
+  }
+ 
+  body {
+    font-family: "mundial", sans-serif;
+  }
