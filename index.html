@@ -55,7 +55,7 @@
       />
       <!-- Top Text -->
       <p
-        class="text-3xl max-lg:text-2xl max-md:text-xl max-[1025px]:px-4 max-sm:text-lg title leading-[50px] min-[1600px]:pt-[111px] pt-[50px] text-white text-center"
+        class="text-3xl top-text max-lg:text-2xl max-md:text-xl max-[1025px]:px-4 max-sm:text-lg title leading-[50px] min-[1600px]:pt-[111px] pt-[50px] text-white text-center"
       >
         Ideata da
         <span
@@ -224,6 +224,17 @@
         });
 
         mm.add("(min-width: 1025px)", () => {
+          // Top Text
+          tl.fromTo(
+            ".top-text",
+            {
+              yPercent: 1000,
+            },
+            {
+              yPercent: 0,
+            },
+            0
+          );
           // bottom arrow
 
           tl.fromTo(
@@ -272,7 +283,7 @@
               opacity: 0,
               scale: 0,
             },
-            1.2
+            1.7
           );
           // bottom arrow
           tl.to(
@@ -280,7 +291,7 @@
             {
               bottom: "300px",
             },
-            1.5
+            2
           );
           // hero left arrow
 
@@ -289,10 +300,10 @@
             {
               left: "70px",
             },
-            1.6
+            2.1
           );
 
-          // Box 1
+          // Box 2
 
           tl.fromTo(
             ".content-box-2",
@@ -304,21 +315,21 @@
               opacity: 1,
               scale: 1,
             },
-            1.8
+            2.3
           );
 
           // hide box
           tl.to(".content-box-2", {
             opacity: 0,
             scale: 0,
-          });
+          } , 3.2);
           // bottom arrow
           tl.to(
             ".arrow-bottom-box",
             {
               bottom: "400px",
             },
-            2.2
+            3.3
           );
           // hero left arrow
           tl.to(
@@ -326,7 +337,7 @@
             {
               left: "120px",
             },
-            2.5
+            3.6
           );
 
           // Box 3
@@ -340,7 +351,7 @@
               opacity: 1,
               scale: 1,
             },
-            2.8
+            4
           );
         });
 
