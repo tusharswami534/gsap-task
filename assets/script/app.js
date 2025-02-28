@@ -8,11 +8,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       end: "400%",
       scrub: 2,
       pin: true,
-      markers: true,
     },
   });
 
-  //   mm.add("(min-width: 1025px)", () => {
   // First Button rotate
   // First Icon
   tl.to(
@@ -259,4 +257,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     7.5
   );
 });
-// });
