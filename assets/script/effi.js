@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       end: "400%",
       scrub: 3,
       pin: true,
-      markers: true,
+      //   markers: true,
     },
   });
 
