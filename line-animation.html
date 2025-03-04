@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/image/uper-face-arrow.png"
+      type="image/x-icon"
+    />
+    <title>Gsap Task</title>
+    <meta name="title" content="Gsap Task" />
+    <meta
+      name="description"
+      content="Obiettivi chiari e definiti perseguiti con un approccio personalizzato verso risultati concreti e misurabili."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gsap-task-peach.vercel.app/" />
+    <meta property="og:title" content="Gsap Task" />
+    <meta
+      property="og:description"
+      content="Obiettivi chiari e definiti perseguiti con un approccio personalizzato verso risultati concreti e misurabili."
+    />
+    <meta property="og:image" content="/meta-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://gsap-task-peach.vercel.app/"
+    />
+    <meta property="twitter:title" content="Gsap Task" />
+    <meta
+      property="twitter:description"
+      content="Obiettivi chiari e definiti perseguiti con un approccio personalizzato verso risultati concreti e misurabili."
+    />
+    <meta property="twitter:image" content="/meta-image.png" />
+  </head>
+  <body class="bg-[#B6EFCB]">
+    <section class="min-h-screen flex justify-center items-center">
+      <h1
+        class="animate-bounce text-6xl max-md:text-5xl max-sm:text-4xl font-bold"
+      >
+        Scroll Down
+      </h1>
+    </section>
+    <section
+      id="line-fill"
+      class="min-h-screen w-full flex justify-center items-center flex-col gap-10"
+    >
+      <div class="w-full h-1 bg-black relative">
+        <div class="blue-line bg-blue-500 h-1 w-0"></div>
+      </div>
+      <div class="max-w-[1140px] w-full relative rounded-md h-[550px]">
+        <img
+          class="absolute image-1 w-[50%] max-sm:w-[75%] max-w-[1140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/assets/image/icons.png"
+          alt="icons"
+        />
+        <img
+          class="absolute image-2 w-[50%] max-sm:w-[75%] max-w-[1140px] opacity-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/assets/image/lock-mail.png"
+          alt="icons"
+        />
+        <img
+          class="absolute image-3 w-[37%] max-sm:w-[75%] max-w-[1140px] opacity-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/assets/image/post.png"
+          alt="icons"
+        />
+        <img
+          class="absolute image-4 w-[50%] max-sm:w-[75%] max-w-[1140px] opacity-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/assets/image/chats.png"
+          alt="icons"
+        />
+        <img
+          class="absolute image-5 w-[50%] max-sm:w-[75%] max-w-[1140px] opacity-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/assets/image/unlock-mail.png"
+          alt="icons"
+        />
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        // gsap.registerPlugin(ScrollTrigger);
+        let mm = gsap.matchMedia();
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#line-fill",
+            start: "top top",
+            end: "400%",
+            scrub: 3,
+            pin: true,
+          },
+        });
+        gsap.set(".blue-line", { width: "20%" });
+        tl.to(
+          ".blue-line",
+          {
+            width: "35%",
+          },
+          0
+        );
+        // IMage 1
+        tl.to(
+          ".image-1",
+          {
+            opacity: 0,
+          },
+          0
+        );
+        // line
+        tl.to(
+          ".blue-line",
+          {
+            width: "50%",
+          },
+          0.5
+        );
+        // IMage 2
+        tl.to(
+          ".image-2",
+          {
+            opacity: 1,
+          },
+          0.5
+        );
+        // Image 2
+        tl.to(
+          ".image-2",
+          {
+            opacity: 0,
+          },
+          1
+        );
+
+        // line
+        tl.to(
+          ".blue-line",
+          {
+            width: "65%",
+          },
+          1
+        );
+        // IMage 3
+        tl.to(
+          ".image-3",
+          {
+            opacity: 1,
+          },
+          1
+        );
+        // Image 3
+        tl.to(
+          ".image-3",
+          {
+            opacity: 0,
+          },
+          1.5
+        );
+
+        // line
+        tl.to(
+          ".blue-line",
+          {
+            width: "80%",
+          },
+          1.5
+        );
+        // IMage 4
+        tl.to(
+          ".image-4",
+          {
+            opacity: 1,
+          },
+          1.5
+        );
+        // Image 4
+        tl.to(
+          ".image-4",
+          {
+            opacity: 0,
+          },
+          2
+        );
+
+        // line
+        tl.to(
+          ".blue-line",
+          {
+            width: "100%",
+          },
+          2
+        );
+        // IMage 5
+        tl.to(
+          ".image-5",
+          {
+            opacity: 1,
+          },
+          2
+        );
+
+        // line
+      });
+    </script>
+  </body>
+</html>
